@@ -1,0 +1,162 @@
+CH1_1.php
+<?php 
+for ($i=1;$i<=10;$i=$i+1)
+{
+	$a[$i]=rand(1,5);
+}
+?>
+<table bgcolor=849faf width="0" border="0" align="center">
+<?php
+ echo "<tr>";
+ for($i=1;$i<=10;$i=$i+1)
+ {
+	 if($a[$i]==1)
+		 echo"<td> <img src=10.png width=50 height=50> </td>";
+	 if($a[$i]==2)
+		 echo"<td> <img src=1.png width=50 height=50> </td>";
+	 if($a[$i]==3)
+		 echo"<td> <img src=2.png width=50 height=50> </td>";
+	 if($a[$i]==4)
+		 echo"<td> <img src=3.png width=50 height=50> </td>";
+	 if($a[$i]==5)
+		 echo"<td> <img src=4.png width=50 height=50> </td>";
+ }
+echo "</tr>";
+?>
+</table>
+<html><head>
+<title>下拉式選單</title></head>
+<body><form name="form6" method="POST" action="CH1.php">
+Choose SHIFT no:
+<select name="coun" size="1">
+	<option value="0">0</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+<select><input type="submit"><input type="reset">
+</form></body></html>
+
+
+<?php 
+$coun=$_POST['coun'];
+for ($i=1;$i<=$coun;$i=$i+1)
+{
+	
+	shif($a);
+	echo "shif$i";
+	echo "<br>";
+}
+
+?>
+
+
+<?php 
+function shif(&$a)
+{
+for ($i=1;$i<=10;$i=$i+1)
+{
+	$a[$i]=$a[$i+1];
+}
+$a[10]=6;
+?>
+<table bgcolor=849faf width="0" border="0" align="center">
+<?php
+ echo "<tr>";
+ for($i=1;$i<=10;$i=$i+1)
+ {
+	 if($a[$i]==1)
+		 echo"<td> <img src=10.png width=50 height=50> </td>";
+	 if($a[$i]==2)
+		 echo"<td> <img src=1.png width=50 height=50> </td>";
+	 if($a[$i]==3)
+		 echo"<td> <img src=2.png width=50 height=50> </td>";
+	 if($a[$i]==4)
+		 echo"<td> <img src=3.png width=50 height=50> </td>";
+	 if($a[$i]==5)
+		 echo"<td> <img src=4.png width=50 height=50> </td>";
+	 if($a[$i]==6)
+		 echo"<td> <img src=16.png width=50 height=50> </td>";
+ }
+echo "</tr>";
+}
+?>
+</table>
+
+----------------------------------------------
+CH1.
+<?php 
+for ($i=1;$i<=10;$i=$i+1)
+{
+	$a[$i]=rand(1,5);
+}
+?>
+<table bgcolor=849faf width="0" border="0" align="center">
+<?php
+ echo "<tr>";
+ for($i=1;$i<=10;$i=$i+1)
+ {
+	 if($a[$i]==1)
+		 echo"<td> <img src=10.png width=50 height=50> </td>";
+	 if($a[$i]==2)
+		 echo"<td> <img src=1.png width=50 height=50> </td>";
+	 if($a[$i]==3)
+		 echo"<td> <img src=2.png width=50 height=50> </td>";
+	 if($a[$i]==4)
+		 echo"<td> <img src=3.png width=50 height=50> </td>";
+	 if($a[$i]==5)
+		 echo"<td> <img src=4.png width=50 height=50> </td>";
+ }
+echo "</tr>";
+?>
+</table>
+
+
+<?php 
+$coun=$_POST['coun'];
+for ($i=1;$i<=$coun;$i=$i+1)
+{
+	
+	shif($a);
+	echo "shif$i";
+	echo "<br>";
+}
+
+?>
+
+
+<?php 
+function shif(&$a)
+{
+for ($i=1;$i<=10;$i=$i+1)
+{
+	$a[$i]=$a[$i+1];
+}
+$a[10]=6;
+?>
+<table bgcolor=849faf width="0" border="0" align="center">
+<?php
+ echo "<tr>";
+ for($i=1;$i<=10;$i=$i+1)
+ {
+	 if($a[$i]==1)
+		 echo"<td> <img src=10.png width=50 height=50> </td>";
+	 if($a[$i]==2)
+		 echo"<td> <img src=1.png width=50 height=50> </td>";
+	 if($a[$i]==3)
+		 echo"<td> <img src=2.png width=50 height=50> </td>";
+	 if($a[$i]==4)
+		 echo"<td> <img src=3.png width=50 height=50> </td>";
+	 if($a[$i]==5)
+		 echo"<td> <img src=4.png width=50 height=50> </td>";
+	 if($a[$i]==6)
+		 echo"<td> <img src=16.png width=50 height=50> </td>";
+ }
+echo "</tr>";
+}
+?>
