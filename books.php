@@ -37,7 +37,7 @@ while ($row=mysql_fetch_array($result))
 <input type="reset" value="重設">
 </form>
 </body>
-<html>
+</html>
 <?
 $bookon=$_GET['bookon'];
 if($_GET['bookon'])
@@ -91,7 +91,7 @@ echo "<tr >
 <input type="reset" value="重設">
 </form>
 </body>
-<html>
+</html>
 
 <?
 $bookna=$_GET['bookna'];
@@ -130,7 +130,7 @@ echo "<tr >
  echo "</table>";
  
 ?>
-
+<br>
 ============================================刪除書本===========================================================
 <br>
 <html><head>
@@ -160,7 +160,7 @@ while ($row=mysql_fetch_array($result))
 <input type="reset">
 </form>
 </body>
-<html>
+</html>
 
 <?
 $bookno1=$_GET['bookno1'];
@@ -218,10 +218,41 @@ echo "<tr >
 }
 }*/
  echo "</table>";
-	
+ 
+?>
+<br>
+============================================新增書本===========================================================
+<br>
 
- 
- 
+<body><form name="form1" method="get" action="books.php">
+輸入書本名稱
+<input type="text" name="name" maxlength="20" size ="20"><br>
+輸入書本價格
+<input type="text" name="money" maxlength="6" size ="20"><br>
+負責員工編號
+<input type="text" name="no" maxlength="6" size ="20"><br>
+
+<br>
+<input type="submit" value="新增">
+<input type="reset" value="重設">
+</form>
+</body>
+
+<?
+if($_GET['name'])
+{
+	$n1=$_GET['name'];
+	$n2=$_GET['money'];
+	$n3=$_GET['no'];
+	
+	$sql="insert into books (書籍名稱,價格,負責員工編號) VALUES('$n1','$n2','$n3')";
+	$result=mysql_query($sql);
+	echo "新增書籍$n1";
+	$sql="";
+	
+}
+
+
 ?>
 
 
